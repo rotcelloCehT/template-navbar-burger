@@ -6,6 +6,7 @@ export const StyledMenu = styled.nav`
   justify-content: center;
   background: ${({ theme }) => theme.primaryLight};
   height: 100vh;
+  width: 100%;
   text-align: left;
   padding: 2rem;
   position: absolute;
@@ -14,23 +15,24 @@ export const StyledMenu = styled.nav`
   transition: transform 0.3s ease-in-out;
   transform: ${({ open }) => open ? 'translateX(0)' : 'translateX(-100%)'};
   
-  @media (max-width: ${({ theme }) => theme.mobile}) {
-    width: 100%;
+  @media (min-width: ${({ theme }) => theme.desktop}) {
+    width: unset;
   }
 
   a {
-    font-size: 2rem;
+    font-size: 1.5rem;
     text-transform: uppercase;
     padding: 2rem 0;
     font-weight: bold;
     letter-spacing: 0.5rem;
     color: ${({ theme }) => theme.primaryDark};
     text-decoration: none;
+    text-align: center;
     transition: color 0.3s linear;
     
-    @media (max-width: ${({ theme }) => theme.mobile}) {
-      font-size: 1.5rem;
-      text-align: center;
+    @media (min-width: ${({ theme }) => theme.mobile}) {
+      font-size: 2rem;
+      text-align: none;
     }
 
     &:hover {

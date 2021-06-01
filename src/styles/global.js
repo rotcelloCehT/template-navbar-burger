@@ -1,7 +1,14 @@
 // global.js
 import { createGlobalStyle } from 'styled-components';
+import Nunito from '../fonts/Nunito-Black.ttf';
 
 export const GlobalStyles = createGlobalStyle`
+@font-face {
+  font-family: 'Nunito';
+  src: url(${Nunito}) format('truetype');
+  font-display: auto;
+}
+
 html, body {
     margin: 0;
     padding: 0;
@@ -19,7 +26,7 @@ html, body {
     color: ${({ theme }) => theme.primaryLight};
     height: 100vh;
     text-rendering: optimizeLegibility;
-    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+    font-family: 'Nunito';
   }
 
   h1 {
