@@ -29,8 +29,8 @@ export const StyledMenu = styled.nav`
     text-decoration: none;
     text-align: center;
     transition: color 0.3s linear;
-    
-    @media (min-width: ${({ theme }) => theme.mobile}) {
+
+    @media (min-width: ${({ theme }) => theme.desktop}) {
       font-size: 2rem;
       text-align: none;
     }
@@ -38,5 +38,7 @@ export const StyledMenu = styled.nav`
     &:hover {
       color: ${({ theme }) => theme.primaryHover};
     }
-  }
+
+  } 
 `;
+// The last '}' is for the a {.... 
